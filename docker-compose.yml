@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: learning_vertx_java
+      POSTGRES_PASSWORD: learning_vertx_java
+      POSTGRES_DB: learning_vertx_java
+    ports:
+      - "5432:5432"

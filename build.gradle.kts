@@ -17,6 +17,7 @@ repositories {
 val vertxVersion = "4.0.0"
 val junitJupiterVersion = "5.7.0"
 val jacksonVersion = "2.11.3"
+val postgresVersion = "42.2.18"
 
 val mainVerticleName = "com.learning.learning_vertx_java.HttpServerVerticle"
 val launcherClassName = "io.vertx.core.Launcher"
@@ -31,7 +32,9 @@ application {
 dependencies {
   implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
   implementation("io.vertx:vertx-web")
+  implementation("io.vertx:vertx-jdbc-client")
   implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+  implementation("org.postgresql:postgresql:$postgresVersion")
 
   testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
